@@ -17,3 +17,7 @@ COPY requirements.txt /usr/src/app/
 RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
 
 COPY . /usr/src/app
+
+EXPOSE 5000
+ENV FLASK_APP=/usr/src/app/src/app.py
+CMD flask run
