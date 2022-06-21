@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: drimer-sports-engine/api:latest
+          tags: drimer/sports-engine-api:latest
