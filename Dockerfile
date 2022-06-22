@@ -22,4 +22,4 @@ COPY . /usr/src/app
 
 EXPOSE 8000
 ENV FLASK_APP=/usr/src/app/src/app.py
-CMD uwsgi --http 0.0.0.0:8000 --master -p 4 --pythonpath /usr/src/app/src/ -w app:app
+CMD uwsgi --http 0.0.0.0:8000 --master -p 1 --pythonpath /usr/src/app/src/ -w app:app
