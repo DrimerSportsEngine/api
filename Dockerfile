@@ -21,5 +21,5 @@ RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
 COPY . /usr/src/app
 
 EXPOSE 8000
-ENV FLASK_APP=/usr/src/app/src/app.py
-CMD uwsgi --http 0.0.0.0:8000 --master -p 1 --pythonpath /usr/src/app/src/ -w app:app
+ENV FLASK_APP=/usr/src/app/src/wsgi.py
+CMD uwsgi --http 0.0.0.0:8000 --master -p 1 --pythonpath /usr/src/app/src/ -w wsgi:app
